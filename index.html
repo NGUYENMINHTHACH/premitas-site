@@ -1,0 +1,344 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #6f0ec3; -webkit-text-stroke: #6f0ec3}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #0e6e6d; -webkit-text-stroke: #0e6e6d}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #18702b; -webkit-text-stroke: #18702b}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; -webkit-text-stroke: #000000; min-height: 16.0px}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #4d5055; -webkit-text-stroke: #4d5055}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px Menlo; color: #bf1c25; -webkit-text-stroke: #bf1c25}
+    span.s1 {font-kerning: none; color: #6f0ec3; background-color: #ecf1f7; -webkit-text-stroke: 0px #6f0ec3}
+    span.s2 {font-kerning: none; background-color: #ecf1f7}
+    span.s3 {font-kerning: none; color: #0e6e6d; background-color: #ecf1f7; -webkit-text-stroke: 0px #0e6e6d}
+    span.s4 {font-kerning: none; color: #18702b; background-color: #ecf1f7; -webkit-text-stroke: 0px #18702b}
+    span.s5 {font-kerning: none; color: #000000; background-color: #ecf1f7; -webkit-text-stroke: 0px #000000}
+    span.s6 {font-kerning: none}
+    span.s7 {font-kerning: none; color: #a4450b; background-color: #ecf1f7; -webkit-text-stroke: 0px #a4450b}
+    span.s8 {font-kerning: none; color: #bf1c25; background-color: #ecf1f7; -webkit-text-stroke: 0px #bf1c25}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1">import</span><span class="s2"> </span><span class="s3">React</span><span class="s2">, { useState, useEffect } </span><span class="s1">from</span><span class="s2"> </span><span class="s4">'react'</span><span class="s2">;</span></p>
+<p class="p2"><span class="s2">import</span><span class="s5"> {<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">Globe</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">Menu</span><span class="s2">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">X</span><span class="s2">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">Smartphone</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">Watch</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s3">Gem</span><span class="s2">,</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">ArrowRight</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">ChevronRight</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">ShieldCheck</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">BarChart4</span><span class="s5">,<span class="Apple-converted-space"> </span></span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">History</span><span class="s5">,</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">TrendingUp</span><span class="s5">,</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">Award</span></p>
+<p class="p4"><span class="s5">} </span><span class="s1">from</span><span class="s5"> </span><span class="s2">'lucide-react'</span><span class="s5">;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p1"><span class="s1">const</span><span class="s2"> </span><span class="s3">App</span><span class="s2"> = () =&gt; {</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">const</span><span class="s2"> [isMenuOpen, setIsMenuOpen] = useState(</span><span class="s1">false</span><span class="s2">);</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">const</span><span class="s2"> [scrolled, setScrolled] = useState(</span><span class="s1">false</span><span class="s2">);</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span>useEffect(() =&gt; {</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">const</span><span class="s2"> handleScroll = () =&gt; {</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>setScrolled(window.scrollY &gt; </span><span class="s7">20</span><span class="s2">);</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>};</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>window.addEventListener(</span><span class="s4">'scroll'</span><span class="s2">, handleScroll);</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span></span><span class="s1">return</span><span class="s2"> () =&gt; window.removeEventListener(</span><span class="s4">'scroll'</span><span class="s2">, handleScroll);</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span>}, []);</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1">const</span><span class="s2"> businessDomains = [</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>{</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>id: </span><span class="s4">"digital"</span><span class="s2">,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>title: </span><span class="s2">"Digital Evolution"</span><span class="s5">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>jpTitle: </span><span class="s4">"デジタル通信・循環事業"</span><span class="s2">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>icon: &lt;</span><span class="s3">Smartphone</span><span class="s2"> className=</span><span class="s4">"w-8 h-8"</span><span class="s2"> /&gt;,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>desc: </span><span class="s2">"通信機器は、情報の命。私たちは最新デバイスの価値を再定義し、最先端の技術と丁寧なメンテナンスで、次の所有者へ最高の状態で繋ぎます。"</span><span class="s5">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>focus: </span><span class="s4">"価値の再生と最適化"</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>},</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>{</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>id: </span><span class="s4">"heritage"</span><span class="s2">,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>title: </span><span class="s2">"Heritage Stewardship"</span><span class="s5">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>jpTitle: </span><span class="s4">"ヘリテージ・アセット管理事業"</span><span class="s2">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>icon: &lt;</span><span class="s3">Watch</span><span class="s2"> className=</span><span class="s4">"w-8 h-8"</span><span class="s2"> /&gt;,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>desc: </span><span class="s2">"時を刻む芸術品に、新たな命を。確かな鑑定眼で歴史を読み解き、適切な修繕と市場分析を通じて、その価値を未来へ昇華させます。"</span><span class="s5">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>focus: </span><span class="s4">"歴史の継承と価値の昇華"</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>},</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>{</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>id: </span><span class="s4">"jewelry"</span><span class="s2">,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>title: </span><span class="s2">"Visionary Brilliance"</span><span class="s5">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>jpTitle: </span><span class="s4">"ジュエリー・ビジョン事業"</span><span class="s2">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>icon: &lt;</span><span class="s3">Gem</span><span class="s2"> className=</span><span class="s4">"w-8 h-8"</span><span class="s2"> /&gt;,</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>desc: </span><span class="s2">"【未来への意志】地球が育んだ輝きを、現代の感性で磨き直す。受け継がれるべき美しさを、より高純度な価値として提供する準備を進めています。"</span><span class="s5">,</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>focus: </span><span class="s4">"本質の研磨と創造"</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span>];</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">return</span><span class="s5"> (</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">    </span>&lt;div className=</span><span class="s2">"min-h-screen bg-white text-[#1a1a1a] font-sans"</span><span class="s5">&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* Navigation */</span><span class="s5">}</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>&lt;nav className={</span><span class="s2">`fixed w-full z-50 transition-all duration-700 </span><span class="s5">${scrolled ? </span><span class="s2">'bg-white/95 backdrop-blur-md shadow-xl py-3'</span><span class="s5"> : </span><span class="s2">'bg-transparent py-8'</span><span class="s5">}</span><span class="s2">`</span><span class="s5">}&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"max-w-[1440px] mx-auto px-8 lg:px-16 flex justify-between items-center"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"flex flex-col group cursor-pointer"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;h1 className={</span><span class="s2">`text-2xl font-black tracking-[0.3em] transition-colors duration-500 </span><span class="s5">${scrolled ? </span><span class="s2">'text-[#002B5B]'</span><span class="s5"> : </span><span class="s2">'text-white'</span><span class="s5">}</span><span class="s2">`</span><span class="s5">}&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span></span><span class="s3">PREMITAS</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/h1&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;div className={</span><span class="s2">`h-[2px] w-0 group-hover:w-full transition-all duration-500 </span><span class="s5">${scrolled ? </span><span class="s2">'bg-[#002B5B]'</span><span class="s5"> : </span><span class="s2">'bg-blue-400'</span><span class="s5">}</span><span class="s2">`</span><span class="s5">}&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;span className={</span><span class="s2">`text-[9px] font-bold tracking-[0.4em] mt-1 transition-colors </span><span class="s5">${scrolled ? </span><span class="s2">'text-slate-500'</span><span class="s5"> : </span><span class="s2">'text-white/70'</span><span class="s5">}</span><span class="s2">`</span><span class="s5">}&gt;</span></p>
+<p class="p3"><span class="s5"><span class="Apple-converted-space">              </span></span><span class="s2">INHERITING</span><span class="s5"> &amp; </span><span class="s2">EVOLVING</span><span class="s5"> </span><span class="s2">VALUE</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/span&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"hidden lg:flex items-center space-x-12"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>{[</span><span class="s2">'Vision'</span><span class="s5">, </span><span class="s2">'Domains'</span><span class="s5">, </span><span class="s2">'Sustainability'</span><span class="s5">, </span><span class="s2">'Company'</span><span class="s5">].map((item) =&gt; (</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;a key={item} href=</span><span class="s2">"#"</span><span class="s5"> className={</span><span class="s2">`text-xs font-black tracking-widest uppercase hover:opacity-40 transition-opacity </span><span class="s5">${scrolled ? </span><span class="s2">'text-slate-800'</span><span class="s5"> : </span><span class="s2">'text-white'</span><span class="s5">}</span><span class="s2">`</span><span class="s5">}&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>{item}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>))}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className={</span><span class="s4">`w-[1px] h-4 </span><span class="s2">${scrolled ? </span><span class="s4">'bg-slate-300'</span><span class="s2"> : </span><span class="s4">'bg-white/30'</span><span class="s2">}</span><span class="s4">`</span><span class="s2">}&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;button className={</span><span class="s2">`flex items-center gap-2 text-[10px] font-black tracking-widest </span><span class="s5">${scrolled ? </span><span class="s2">'text-slate-800'</span><span class="s5"> : </span><span class="s2">'text-white'</span><span class="s5">}</span><span class="s2">`</span><span class="s5">}&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;</span><span class="s3">Globe</span><span class="s2"> size={</span><span class="s7">14</span><span class="s2">} /&gt; </span><span class="s3">JP</span><span class="s2"> / </span><span class="s3">EN</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;button onClick={() =&gt; setIsMenuOpen(!isMenuOpen)} className={</span><span class="s4">`lg:hidden p-2 </span><span class="s2">${scrolled ? </span><span class="s4">'text-[#002B5B]'</span><span class="s2"> : </span><span class="s4">'text-white'</span><span class="s2">}</span><span class="s4">`</span><span class="s2">}&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>{isMenuOpen ? &lt;</span><span class="s3">X</span><span class="s2"> size={</span><span class="s7">28</span><span class="s2">} /&gt; : &lt;</span><span class="s3">Menu</span><span class="s2"> size={</span><span class="s7">28</span><span class="s2">} /&gt;}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/nav&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* Hero Section */</span><span class="s5">}</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>&lt;section className=</span><span class="s2">"relative h-screen flex items-center overflow-hidden bg-slate-900"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s4">"absolute inset-0"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;img<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>src=</span><span class="s2">"https://images.unsplash.com/photo-1493333858339-3c44cdad93eb?auto=format&amp;fit=crop&amp;q=80&amp;w=2000"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>alt=</span><span class="s4">"Evolving City"</span><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>className=</span><span class="s2">"w-full h-full object-cover opacity-60 scale-100"</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>/&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-[#002B5B]/40"</span><span class="s5">&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">        </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"relative max-w-7xl mx-auto px-8 lg:px-16 w-full text-white pt-20"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s4">"max-w-4xl space-y-12"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"flex items-center gap-4"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s4">"w-12 h-[1px] bg-blue-400"</span><span class="s2">&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;span className=</span><span class="s2">"text-blue-400 text-xs font-black tracking-[0.5em] uppercase animate-pulse"</span><span class="s5">&gt;</span><span class="s3">Inheritance</span><span class="s5"> &amp; </span><span class="s3">Evolution</span><span class="s5">&lt;/span&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;h2 className=</span><span class="s2">"text-6xl md:text-8xl font-black leading-tight tracking-tighter"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span></span><span class="s8">受け継ぎ、</span><span class="s2">&lt;br /&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span></span><span class="s8">さらに磨く。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/h2&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"max-w-xl"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;p className=</span><span class="s2">"text-xl md:text-2xl font-light text-slate-200 leading-relaxed mb-10"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span></span><span class="s3">Premitas</span><span class="s8">が目指すのは、単なる継承ではありません。</span><span class="s2">&lt;br /&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">昨日までの価値を、今日、私たちの手でより良くし、</span><span class="s5">&lt;br /&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">明日という未来へ最適化して届けること。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;button className=</span><span class="s2">"group relative px-12 py-6 bg-white text-[#002B5B] font-black text-xs tracking-[0.3em] uppercase overflow-hidden transition-all"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;span className=</span><span class="s4">"relative z-10"</span><span class="s2">&gt;</span><span class="s3">Our</span><span class="s2"> </span><span class="s3">Philosophy</span><span class="s2">&lt;/span&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;div className=</span><span class="s2">"absolute inset-0 bg-blue-50 translate-y-full group-hover:translate-y-0 transition-transform duration-300"</span><span class="s5">&gt;&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* Philosophy Section - 価値を受け継ぐことの定義 */</span><span class="s5">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;section className=</span><span class="s4">"py-40 bg-white"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s4">"max-w-5xl mx-auto px-8"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"grid grid-cols-1 lg:grid-cols-12 gap-16 items-start"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"lg:col-span-4"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;span className=</span><span class="s2">"text-[#002B5B] font-black tracking-[0.4em] uppercase text-[10px] mb-6 block border-l-4 border-[#002B5B] pl-4"</span><span class="s5">&gt;</span><span class="s3">Concept</span><span class="s5">&lt;/span&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;h3 className=</span><span class="s2">"text-4xl font-black text-[#002B5B] leading-tight tracking-tighter"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span></span><span class="s8">「受け継ぐ」とは、</span><span class="s2">&lt;br /&gt;</span><span class="s8">進化させること。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/h3&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"lg:col-span-8 space-y-8"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;p className=</span><span class="s2">"text-slate-600 leading-[2.4] text-xl font-medium"</span><span class="s5">&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">価値を受け継ぐという言葉は、短く、潔い。しかしそこには、これまでその物が歩んできた歴史への深い敬意と、「今、この瞬間にもっと良くしたい」という私たちの情熱が詰まっています。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;p className=</span><span class="s2">"text-slate-500 leading-loose text-lg"</span><span class="s5">&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s3">Premitas</span><span class="s2">合同会社は、スマホ・腕時計・ジュエリーという、人の想いが宿る品々を扱います。私たちが介在することで、機能はより正確に、美しさはより鮮明に。受け継ぐ前よりも価値を高め、次の時代へ「最適化」して繋ぐ。それが私たちの存在意義です。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* Business Domains - 価値を磨く3つの舞台 */</span><span class="s5">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;section className=</span><span class="s4">"py-40 bg-slate-50"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"max-w-[1440px] mx-auto px-8 lg:px-16"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"flex flex-col md:flex-row justify-between items-end mb-24 gap-8"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"space-y-4"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;h3 className=</span><span class="s2">"text-5xl font-black tracking-tighter text-[#002B5B]"</span><span class="s5">&gt;</span><span class="s3">Business</span><span class="s5"> </span><span class="s3">Domains</span><span class="s5">&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;p className=</span><span class="s2">"text-blue-600 font-black tracking-[0.3em] uppercase text-xs"</span><span class="s5">&gt;</span><span class="s8">価値を研磨する</span><span class="s7">3</span><span class="s8">つの領域</span><span class="s5">&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"grid grid-cols-1 md:grid-cols-3 gap-12"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>{businessDomains.map((bu) =&gt; (</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;div key={bu.id} className=</span><span class="s2">"group bg-white p-12 lg:p-16 flex flex-col h-full shadow-sm hover:shadow-2xl transition-all duration-700 border-b-4 border-transparent hover:border-[#002B5B]"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;div className=</span><span class="s2">"mb-12 text-[#002B5B] transition-transform duration-700 group-hover:-translate-y-2"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>{bu.icon}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;div className=</span><span class="s4">"flex-1"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>&lt;h4 className=</span><span class="s2">"text-[10px] font-black tracking-[0.3em] text-slate-400 mb-2 uppercase"</span><span class="s5">&gt;{bu.title}&lt;/h4&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>&lt;h5 className=</span><span class="s4">"text-2xl font-black mb-8 text-[#002B5B]"</span><span class="s2">&gt;{bu.jpTitle}&lt;/h5&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>&lt;p className=</span><span class="s2">"text-slate-500 mb-12 leading-[2] text-sm font-medium italic"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                    </span></span><span class="s4">"{bu.desc}"</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;div className=</span><span class="s2">"pt-8 border-t border-slate-100 flex items-center justify-between"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>&lt;span className=</span><span class="s2">"text-[10px] font-black tracking-widest text-blue-600 uppercase"</span><span class="s5">&gt;{bu.focus}&lt;/span&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>&lt;div className=</span><span class="s2">"w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center group-hover:bg-[#002B5B] group-hover:text-white transition-all"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                    </span>&lt;</span><span class="s3">ChevronRight</span><span class="s2"> size={</span><span class="s7">16</span><span class="s2">} /&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>))}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* Value Chain - 受け継ぐプロセス */</span><span class="s5">}</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>&lt;section className=</span><span class="s2">"py-40 bg-[#002B5B] text-white overflow-hidden relative"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"absolute top-0 right-0 w-1/2 h-full bg-blue-900/20 skew-x-12 translate-x-32"</span><span class="s5">&gt;&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"max-w-7xl mx-auto px-8 lg:px-16 relative z-10"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"grid grid-cols-1 lg:grid-cols-2 gap-24 items-center"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"space-y-12"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s4">"space-y-6"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;span className=</span><span class="s2">"text-blue-400 font-black tracking-[0.4em] uppercase text-xs"</span><span class="s5">&gt;</span><span class="s3">Our</span><span class="s5"> </span><span class="s3">Process</span><span class="s5">&lt;/span&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;h3 className=</span><span class="s4">"text-5xl font-black leading-tight"</span><span class="s2">&gt;</span><span class="s8">価値が、</span><span class="s2">&lt;br /&gt;</span><span class="s8">昇華する工程。</span><span class="s2">&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;p className=</span><span class="s2">"text-blue-100/70 leading-[2] text-lg"</span><span class="s5">&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                  </span></span><span class="s3">Premitas</span><span class="s2">の手元に届いた瞬間から、価値のアップデートが始まります。</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                  </span></span><span class="s2">徹底した現状分析、専門家によるメンテナンス、そして最適なオーナーへのマッチング。</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                  </span></span><span class="s2">私たちが介在する時間は「短く、濃密」であり、その一瞬で物は新たな輝きを放ちます。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s4">"space-y-8"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>{[</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>{ icon: &lt;</span><span class="s3">History</span><span class="s2"> /&gt;, title: </span><span class="s4">"History Analysis"</span><span class="s2">, desc: </span><span class="s4">"これまでの歴史と想いを正しく理解する"</span><span class="s2"> },</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>{ icon: &lt;</span><span class="s3">TrendingUp</span><span class="s2"> /&gt;, title: </span><span class="s4">"Optimization"</span><span class="s2">, desc: </span><span class="s4">"現代の基準に合わせ、品質と価値を最大化する"</span><span class="s2"> },</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>{ icon: &lt;</span><span class="s3">Award</span><span class="s2"> /&gt;, title: </span><span class="s4">"New Heritage"</span><span class="s2">, desc: </span><span class="s4">"次世代のアンティーク、次世代のスタンダードとして送り出す"</span><span class="s2"> }</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>].map((item, i) =&gt; (</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>&lt;div key={i} className=</span><span class="s4">"flex gap-6 items-start group"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                    </span>&lt;div className=</span><span class="s2">"mt-1 text-blue-400 group-hover:scale-125 transition-transform"</span><span class="s5">&gt;{item.icon}&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                    </span>&lt;div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                      </span>&lt;h6 className=</span><span class="s4">"font-black text-sm tracking-widest uppercase mb-1"</span><span class="s2">&gt;{item.title}&lt;/h6&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                      </span>&lt;p className=</span><span class="s4">"text-xs text-blue-200/60 font-medium"</span><span class="s2">&gt;{item.desc}&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>))}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"relative"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s2">"aspect-[4/5] bg-slate-800 rounded-sm overflow-hidden shadow-2xl"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;img<span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>src=</span><span class="s2">"https://images.unsplash.com/photo-1551818255-e6e10975bc17?auto=format&amp;fit=crop&amp;q=80&amp;w=1000"</span><span class="s5"><span class="Apple-converted-space"> </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>alt=</span><span class="s4">"Craftsmanship"</span><span class="s2"><span class="Apple-converted-space"> </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>className=</span><span class="s2">"w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-1000"</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>/&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s2">"absolute -bottom-8 -left-8 bg-blue-500 p-12 shadow-2xl"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;p className=</span><span class="s4">"text-3xl font-black italic"</span><span class="s2">&gt;</span><span class="s3">Refining</span><span class="s2">&lt;br /&gt;</span><span class="s3">Tradition</span><span class="s2">.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* News / Latest Perspectives */</span><span class="s5">}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;section className=</span><span class="s4">"py-40 bg-white"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"max-w-[1440px] mx-auto px-8 lg:px-16"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"flex justify-between items-end mb-20"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;h3 className=</span><span class="s2">"text-4xl font-black tracking-tighter text-[#002B5B]"</span><span class="s5">&gt;</span><span class="s3">News</span><span class="s5"> &amp; </span><span class="s3">Perspectives</span><span class="s5">&lt;/h3&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">            </span>&lt;button className=</span><span class="s2">"text-[10px] font-black border-b-2 border-[#002B5B] pb-1 hover:text-blue-600 hover:border-blue-600 transition-all"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span></span><span class="s3">VIEW</span><span class="s2"> </span><span class="s3">ALL</span><span class="s2"> </span><span class="s3">NEWS</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s4">"space-y-1"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>{[</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>{ date: </span><span class="s2">'2024.12.01'</span><span class="s5">, cat: </span><span class="s2">'Vision'</span><span class="s5">, title: </span><span class="s2">'「受け継ぐ」ということの本質的価値についての考察'</span><span class="s5"> },</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>{ date: </span><span class="s2">'2024.11.20'</span><span class="s5">, cat: </span><span class="s2">'Business'</span><span class="s5">, title: </span><span class="s2">'ハイエンド・スマートデバイスの二次流通における品質保証基準の刷新'</span><span class="s5"> },</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>{ date: </span><span class="s2">'2024.11.05'</span><span class="s5">, cat: </span><span class="s2">'Upcoming'</span><span class="s5">, title: </span><span class="s2">'ジュエリー事業：希少石の価値を次世代へ繋ぐ「Inheritance Jewelry」プロジェクト始動'</span><span class="s5"> },</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>].map((news, i) =&gt; (</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;a key={i} href=</span><span class="s2">"#"</span><span class="s5"> className=</span><span class="s2">"flex flex-col md:flex-row gap-6 md:gap-16 py-12 border-b border-slate-100 group transition-all hover:px-8 hover:bg-slate-50"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;div className=</span><span class="s2">"flex gap-8 items-center min-w-[200px]"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span>&lt;span className=</span><span class="s4">"text-slate-400 font-mono text-sm tracking-tighter"</span><span class="s2">&gt;{news.date}&lt;/span&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                  </span>&lt;span className=</span><span class="s2">"text-[9px] font-black px-4 py-1.5 bg-slate-100 text-slate-500 rounded-full group-hover:bg-[#002B5B] group-hover:text-white transition-all"</span><span class="s5">&gt;{news.cat}&lt;/span&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;h6 className=</span><span class="s2">"font-bold flex-1 text-xl text-[#002B5B] group-hover:translate-x-2 transition-transform"</span><span class="s5">&gt;{news.title}&lt;/h6&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;</span><span class="s3">ArrowRight</span><span class="s5"> size={</span><span class="s7">20</span><span class="s5">} className=</span><span class="s2">"text-slate-300 group-hover:text-[#002B5B] transition-colors"</span><span class="s5"> /&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/a&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>))}</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/section&gt;</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">      </span>{</span><span class="s2">/* Footer */</span><span class="s5">}</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">      </span>&lt;footer className=</span><span class="s2">"bg-[#002B5B] text-white pt-40 pb-16 relative overflow-hidden"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"max-w-[1440px] mx-auto px-8 lg:px-16 relative z-10"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"grid grid-cols-1 md:grid-cols-12 gap-20 mb-32"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"md:col-span-6 space-y-10"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s4">"space-y-2"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;h2 className=</span><span class="s2">"text-4xl font-black tracking-[0.3em]"</span><span class="s5">&gt;</span><span class="s3">PREMITAS</span><span class="s5">&lt;/h2&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;p className=</span><span class="s2">"text-blue-400 text-[10px] font-black tracking-[0.4em] uppercase"</span><span class="s5">&gt;</span><span class="s3">Premitas</span><span class="s5"> </span><span class="s3">G</span><span class="s5">.</span><span class="s3">K</span><span class="s5">. / </span><span class="s3">Value</span><span class="s5"> </span><span class="s3">Optimization</span><span class="s5">&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;p className=</span><span class="s2">"text-slate-400 text-lg leading-relaxed max-w-md font-light italic"</span><span class="s5">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">"Yesterday's value, optimized for tomorrow."</span><span class="s5">&lt;br /&gt;</span></p>
+<p class="p7"><span class="s5"><span class="Apple-converted-space">                </span></span><span class="s2">私たちは、受け継ぐたびに価値が上がる、そんな世界を目指しています。</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"md:col-span-3 space-y-8"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;h6 className=</span><span class="s2">"text-[10px] font-black tracking-[0.4em] text-blue-400 uppercase"</span><span class="s5">&gt;</span><span class="s3">Navigation</span><span class="s5">&lt;/h6&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;ul className=</span><span class="s2">"space-y-5 text-sm font-bold text-slate-300"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href=</span><span class="s4">"#"</span><span class="s2"> className=</span><span class="s4">"hover:text-white transition-colors"</span><span class="s2">&gt;</span><span class="s3">Philosophy</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href=</span><span class="s4">"#"</span><span class="s2"> className=</span><span class="s4">"hover:text-white transition-colors"</span><span class="s2">&gt;</span><span class="s3">Business</span><span class="s2"> </span><span class="s3">Domains</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href=</span><span class="s4">"#"</span><span class="s2"> className=</span><span class="s4">"hover:text-white transition-colors"</span><span class="s2">&gt;</span><span class="s3">Sustainability</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;li&gt;&lt;a href=</span><span class="s4">"#"</span><span class="s2"> className=</span><span class="s4">"hover:text-white transition-colors"</span><span class="s2">&gt;</span><span class="s3">Company</span><span class="s2"> </span><span class="s3">Profile</span><span class="s2">&lt;/a&gt;&lt;/li&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/ul&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"md:col-span-3 space-y-8"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;h6 className=</span><span class="s2">"text-[10px] font-black tracking-[0.4em] text-blue-400 uppercase"</span><span class="s5">&gt;</span><span class="s3">Contact</span><span class="s5">&lt;/h6&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;div className=</span><span class="s4">"space-y-6"</span><span class="s2">&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;p className=</span><span class="s2">"text-slate-300 text-sm font-bold leading-loose"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span></span><span class="s3">Premitas</span><span class="s8">合同会社</span><span class="s2">&lt;br /&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span></span><span class="s8">東京都中央区日本橋（</span><span class="s3">Headquarters</span><span class="s8">）</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/p&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">                </span>&lt;button className=</span><span class="s2">"px-8 py-4 border-2 border-white/20 text-[10px] font-black tracking-[0.3em] hover:bg-white hover:text-[#002B5B] transition-all w-full text-center"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                  </span></span><span class="s3">INQUIRY</span><span class="s2"> </span><span class="s3">FORM</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">                </span>&lt;/button&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p5"><span class="s2"><span class="Apple-converted-space">          </span></span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">          </span>&lt;div className=</span><span class="s2">"pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-slate-500 text-[9px] font-black tracking-[0.3em] uppercase"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;div className=</span><span class="s4">"flex gap-12"</span><span class="s2">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">              </span>&lt;a href=</span><span class="s4">"#"</span><span class="s2"> className=</span><span class="s4">"hover:text-white transition-colors"</span><span class="s2">&gt;</span><span class="s3">Privacy</span><span class="s2"> </span><span class="s3">Policy</span><span class="s2">&lt;/a&gt;</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">              </span>&lt;a href=</span><span class="s2">"#"</span><span class="s5"> className=</span><span class="s2">"hover:text-white transition-colors"</span><span class="s5">&gt;</span><span class="s3">Compliance</span><span class="s5">&lt;/a&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">            </span>&lt;p&gt;</span><span class="s8">©</span><span class="s2"> </span><span class="s3">PREMITAS</span><span class="s2"> </span><span class="s3">G</span><span class="s2">.</span><span class="s3">K</span><span class="s2">. </span><span class="s3">ALL</span><span class="s2"> </span><span class="s3">RIGHTS</span><span class="s2"> </span><span class="s3">RESERVED</span><span class="s2">.&lt;/p&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p6"><span class="s5"><span class="Apple-converted-space">        </span>{</span><span class="s2">/* Decorative elements */</span><span class="s5">}</span></p>
+<p class="p4"><span class="s5"><span class="Apple-converted-space">        </span>&lt;div className=</span><span class="s2">"absolute bottom-0 right-0 text-[20vw] font-black text-white/5 leading-none select-none pointer-events-none -mb-[5vw] -mr-[2vw]"</span><span class="s5">&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">          </span></span><span class="s3">PREMITAS</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span>&lt;/footer&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span>);</span></p>
+<p class="p1"><span class="s2">};</span></p>
+<p class="p5"><span class="s6"></span><br></p>
+<p class="p2"><span class="s2">export</span><span class="s5"> </span><span class="s2">default</span><span class="s5"> </span><span class="s3">App</span><span class="s5">;</span></p>
+</body>
+</html>
